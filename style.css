@@ -69,14 +69,46 @@ main {
 }
 
 .homepage {
-    padding-left: 3%;
+    padding: 6% 3%;
     width: 100%;
-    min-height: 120vh;
+    min-height: 100vh;
+    padding-top: 50px;
     background-image: url('images/gallery-1.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .homepage {
+        padding: 4% 3%;
+    }
+}
+
+/* Make the homepage background scale down on narrower viewports */
+@media (max-width: 1000px) {
+    .homepage {
+        /* reduce vertical footprint so background appears smaller */
+        min-height: 70vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .homepage {
+       
+        min-height: auto;
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 50px; 
+    }
+
+    .htext p {
+        width: 90%;
+    }
 }
 
 .htext h1 {
