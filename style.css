@@ -88,10 +88,10 @@ main {
     }
 }
 
-/* Make the homepage background scale down on narrower viewports */
+
 @media (max-width: 1000px) {
     .homepage {
-        /* reduce vertical footprint so background appears smaller */
+        
         min-height: 70vh;
     }
 }
